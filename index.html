@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beaverton MFG — Store</title>
+<meta name="description" content="Student-made wood, metal, apparel, and graphics work from the Beaverton MFG shop at Westview High School.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="index.html">Beaverton<span>MFG</span></a>
+  <nav class="site-nav">
+    <a href="index.html#capabilities">Capabilities</a>
+    <a href="index.html" class="is-active">Store</a>
+    <a href="index.html#custom">Custom Orders</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-kicker">Westview High School · CTE Manufacturing Program</p>
+    <h1>BMFG Store</h1>
+    <p class="hero-lede">Student Made Products</p>
+  </div>
+</section>
+
+<section class="filter-bar" id="store">
+  <div class="filter-bar-inner">
+    <span class="filter-label">Type:</span>
+    <div class="filter-chips" id="filterChips">
+      <!-- filled by main.js -->
+    </div>
+  </div>
+</section>
+
+<main class="product-grid" id="productGrid">
+  <!-- product cards injected by main.js -->
+</main>
+
+<p class="empty-state" id="emptyState" hidden>Nothing in this category yet — check back soon, or request a custom piece below.</p>
+
+<section class="custom-cta" id="custom">
+  <div class="custom-cta-inner">
+    <h2>Don't see what you need?</h2>
+    <p>Describe what you want built — a sign, a clock, a patch, a bracket — and we'll quote it and build it to order.</p>
+    <a class="btn btn-outline" href="mailto:beavertonmfg@example.org?subject=Custom%20Order%20Request">Request a Custom Piece</a>
+  </div>
+</section>
+
+<footer class="site-footer" id="contact">
+  <p>Beaverton MFG is a student-designed and led manufacturing team at Westview High School. Every purchase supports our CTE Manufacturing Program — materials, machine upkeep, and new projects.</p>
+  <p class="footer-meta">Questions? <a href="mailto:beavertonmfg@example.org">beavertonmfg@example.org</a></p>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

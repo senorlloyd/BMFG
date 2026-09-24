@@ -32,6 +32,17 @@
 
 const PRODUCTS = [
   {
+    id: "Jack-o-Lantern_Box",
+    name: "Jack-o-Lantern Box",
+    category: "wood",          // wood | metal | apparel | graphics
+    price: 15.00,
+    image: "images/placeholder-fidget-cube.svg",
+    description: "Jack o Lantern Box",
+    badge: null,   
+    squareLink: null,
+    available: true
+  },
+  {
     id: "fidget-infinity-cube",
     name: "Fidget Infinity Cube",
     category: "graphics",          // wood | metal | apparel | graphics

@@ -409,3 +409,11 @@ img { max-width: 100%; display: block; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ============================================================
+ * About Page
+ * ============================================================*/
+
+.About-Image {
+  width: 50%;
+}

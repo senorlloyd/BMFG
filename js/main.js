@@ -57,7 +57,6 @@ function renderGrid() {
     card.dataset.category = p.category;
 
     card.innerHTML = `
-      <span class="card-punch" aria-hidden="true"></span>
       <div class="card-media">
         <img src="${p.image}" alt="${p.name}" loading="lazy">
       </div>

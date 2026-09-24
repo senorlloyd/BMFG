@@ -223,15 +223,14 @@ img { max-width: 100%; display: block; }
 .chip:hover { border-color: var(--graphite); }
 
 /* ============================================================
-   Product grid — cards styled as shop tickets
+   Product grid
    ============================================================ */
-.product-grid {
-  max-width: 1180px;
+.product-grid { 
   margin: 0 auto;
   padding: 2.5rem 1.75rem 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 1.5rem; 
 }
 
 .card {
@@ -240,36 +239,16 @@ img { max-width: 100%; display: block; }
   border: 1.5px solid var(--line);
   display: flex;
   flex-direction: column;
-  padding-left: 10px; /* room for spine */
 }
 
-.card::before {
-  /* category spine */
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 10px;
-  background: var(--spine, var(--graphite));
-}
 
 .card[data-category="wood"]     { --spine: var(--cat-wood); }
 .card[data-category="metal"]    { --spine: var(--cat-metal); }
 .card[data-category="apparel"]  { --spine: var(--cat-apparel); }
 .card[data-category="graphics"] { --spine: var(--cat-graphics); }
 
-.card-punch {
-  position: absolute;
-  left: 22px;
-  top: 14px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--paper);
-  border: 1.5px solid var(--line);
-  z-index: 2;
-}
+
+
 
 .card-media {
   aspect-ratio: 4 / 3;
@@ -279,7 +258,7 @@ img { max-width: 100%; display: block; }
 }
 .card-media img { width: 100%; height: 100%; object-fit: cover; }
 
-.card-badge {
+.card-badge { 
   position: absolute;
   top: 10px;
   right: 10px;
@@ -292,12 +271,12 @@ img { max-width: 100%; display: block; }
   padding: 0.3em 0.6em;
 }
 
-.card-body {
+.card-body { /* for card text area */
   padding: 1.1rem 1.15rem 1.3rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  flex: 1;
+  flex: 1; 
 }
 
 .card-cat {

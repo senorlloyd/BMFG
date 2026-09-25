@@ -415,16 +415,18 @@ img { max-width: 100%; display: block; }
  * ============================================================*/
 
 .About-Image {
-  width: 50%;
+  width: 50vw;
+  height: calc(100vh - 68.2px);
+  /*height: 100vh;*/
+  overflow: hidden;
   float: right;
-  padding: 5%;
 }
 
 
 .About-Text {
   font-size: 2rem;
-  width: 50%;
-  padding: 15px;
+  width: 50vw;
+  padding: 5vw;
   text-align: center;
 }
 

@@ -416,4 +416,15 @@ img { max-width: 100%; display: block; }
 
 .About-Image {
   width: 50%;
+  float: right;
+  padding: 5%;
 }
+
+
+.About-Text {
+  font-size: 2rem;
+  width: 50%;
+  padding: 15px;
+  text-align: center;
+}
+

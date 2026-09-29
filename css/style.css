@@ -390,14 +390,41 @@ img { max-width: 100%; display: block; }
 .footer-meta a:hover { text-decoration: underline; }
 
 /* ============================================================
+ * About Page
+ * ============================================================*/
+
+.About-Image {
+  width: 50vw;
+  height: calc(100vh - 68.2px);
+  overflow: hidden;
+  float: right;
+}
+
+
+.About-Text {
+  font-size: 2rem;
+  width: 50vw;
+  padding: 5vw;
+  text-align: center;
+}
+
+
+/* ============================================================
    Responsive
    ============================================================ */
+
+@media (max-width: 1000px) {
+  .About-Image {width: 100vw; height: auto; float: none;}
+  .About-Text {width: 100vw; font-size: 1.5rem};
+}
+
 @media (max-width: 640px) {
   .site-header { padding: 1rem; }
   .site-nav { gap: 1rem; font-size: 0.85rem; }
   .hero { padding: 3rem 1.25rem 2.75rem; }
   .filter-bar { top: 61px; padding: 0.85rem 1.25rem; }
   .product-grid { padding: 2rem 1.25rem 0.5rem; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .About-Text {font-size: 1rem};
 }
 
 @media (max-width: 420px) {
@@ -410,23 +437,4 @@ img { max-width: 100%; display: block; }
   * { transition: none !important; }
 }
 
-/* ============================================================
- * About Page
- * ============================================================*/
-
-.About-Image {
-  width: 50vw;
-  height: calc(100vh - 68.2px);
-  /*height: 100vh;*/
-  overflow: hidden;
-  float: right;
-}
-
-
-.About-Text {
-  font-size: 2rem;
-  width: 50vw;
-  padding: 5vw;
-  text-align: center;
-}
 

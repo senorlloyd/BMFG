@@ -8,7 +8,7 @@ const PRODUCTS = [
     name: "Jack-o-Lantern Box",
     category: "wood",          // wood | metal | apparel | graphics
     price: 8.00,
-    image: "Assets/HomePage/placeholder-fidget-cube.svg",
+    image: "Assets/HomePage/Pumpkin_Cover.JPG",
     description: "Jack o Lantern Box",
     badge: null,   
     squareLink: "https://checkout.square.site/merchant/ML3TT23K1TY30/checkout/EGGFPICSXUCRX7F5VQIDHKHR",

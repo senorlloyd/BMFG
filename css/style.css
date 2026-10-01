@@ -409,6 +409,22 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
+/* ===========================================================
+ * Gallery
+ * =========================================================== */
+
+.Gallery_Carousel {
+  height: calc(100vh - 68.2px);
+  overflow: hidden;
+  float: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Carousel_Image {
+  height: 100%;
+  object-fit: cover;
+}
 
 /* ============================================================
    Responsive

@@ -4,4 +4,6 @@
    Captions come from file names, or from Assets/About/Media/captions.txt. */
 
 const ABOUT_MEDIA = [
+  {"type": "image", "src": "Assets/About/Media/DSC_8198.JPG"},
+  {"type": "image", "src": "Assets/About/Media/DSC_8347.JPG"}
 ];

@@ -1,0 +1,160 @@
+/* ============================================================
+   About page: photo carousel + live collage
+   Loaded only by about.html, after style.css (uses its colors and
+   fonts). Every class here starts with "about-" so nothing can
+   clash with the rest of the site. Delete this file, the two
+   <section class="about-media"> blocks in about.html, and the two
+   script tags to remove the feature entirely.
+   ============================================================ */
+
+.about-media {
+  clear: both;               /* sit below the floated photo above */
+  max-width: calc(1080px + 3.5rem);
+  margin: 0 auto;
+  padding: 3.5rem 1.75rem 0;
+}
+.about-media[hidden] { display: none; }
+.about-media--collage { padding-bottom: 3.5rem; }
+
+/* ---------- Carousel ---------- */
+.about-carousel {
+  background: var(--paper);
+  border: 3px solid var(--graphite);
+}
+
+.about-carousel-viewport {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  aspect-ratio: 16 / 9;
+  background: var(--paper-dim);
+}
+.about-carousel-viewport::-webkit-scrollbar { display: none; }
+
+.about-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+.about-slide img,
+.about-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-carousel-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.9rem;
+  border-top: 3px solid var(--graphite);
+}
+.about-carousel-caption {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  min-height: 1.2em;
+}
+.about-carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.about-carousel-count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-right: 0.4rem;
+}
+
+.about-ctrl {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 0.7rem;
+  background: var(--paper);
+  color: var(--graphite);
+  border: 2px solid var(--graphite);
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+.about-ctrl:hover,
+.about-ctrl:focus-visible { background: var(--graphite); color: var(--paper); }
+.about-ctrl--text { min-width: 0; }
+
+/* ---------- Collage: contact-sheet grid with dark gutters ---------- */
+.about-collage-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.about-collage-head h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--graphite);
+}
+
+.about-collage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: clamp(120px, 17vw, 200px);
+  gap: 6px;
+  padding: 6px;
+  background: var(--graphite);
+}
+
+.about-tile {
+  position: relative;
+  overflow: hidden;
+  background: #2B3238;
+}
+.about-tile:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.about-tile:nth-child(6) { grid-column: span 2; }
+
+.about-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+.about-layer.is-in { opacity: 1; }
+.about-layer img,
+.about-layer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .about-media { padding: 2.5rem 1rem 0; }
+  .about-media--collage { padding-bottom: 2.5rem; }
+  .about-carousel-bar { flex-direction: column; align-items: flex-start; }
+  .about-carousel-controls { width: 100%; justify-content: space-between; }
+  .about-carousel-count { margin-right: auto; }
+}
+
+@media (max-width: 640px) {
+  .about-collage { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 38vw; }
+  .about-tile:nth-child(n+6) { display: none; }
+  .about-tile:nth-child(6) { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-layer { transition: none; }
+}

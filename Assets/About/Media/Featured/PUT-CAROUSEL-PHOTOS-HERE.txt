@@ -1,0 +1,4 @@
+Photos and clips you put in this folder play in the carousel at the top of the
+About page (and also appear in the collage). Files play in file-name order, so
+name them 01-, 02-, ... to control the order. See ABOUT-MEDIA.md in the main
+folder for details. This note is ignored by the site and can stay.

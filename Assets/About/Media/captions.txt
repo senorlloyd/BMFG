@@ -1,0 +1,4 @@
+# Optional captions for the About page. One per line:   file-name.jpg: Caption text
+# Without a line here, the caption is made from the file name
+# (CNC-mill-cutting-coasters.jpg becomes "CNC mill cutting coasters").
+# Camera names like IMG_4821.jpg get no caption. Lines starting with # are ignored.

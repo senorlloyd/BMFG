@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/about-media.css">
 </head>
 
 <body>
@@ -40,7 +41,40 @@
   <p>Beaverton MFG is a manufacturing team run by students at Westview High School. Every product is made with care and every purchase made helps out the program.</p>
 </div>
 
+
+<!-- Featured carousel: plays the files in Assets/About/Media/Featured/ -->
+<section class="about-media about-media--carousel" aria-label="Featured photos and video">
+  <div class="about-carousel" id="aboutCarousel" role="region" aria-roledescription="carousel" aria-label="Featured shop media">
+    <div class="about-carousel-viewport" id="aboutCarouselViewport" tabindex="0"></div>
+    <div class="about-carousel-bar">
+      <p class="about-carousel-caption" id="aboutCarouselCaption"></p>
+      <div class="about-carousel-controls">
+        <span class="about-carousel-count" id="aboutCarouselCount"></span>
+        <button class="about-ctrl about-ctrl--text" id="aboutCarouselPause" type="button" aria-pressed="false">Pause</button>
+        <button class="about-ctrl" id="aboutCarouselPrev" type="button" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+        </button>
+        <button class="about-ctrl" id="aboutCarouselNext" type="button" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Live collage: tiles swap to other files from Assets/About/Media/ every couple of seconds -->
+<section class="about-media about-media--collage" aria-labelledby="aboutCollageTitle">
+  <div class="about-collage-head">
+    <h2 id="aboutCollageTitle">Inside the shop</h2>
+    <button class="about-ctrl about-ctrl--text" id="aboutCollageToggle" type="button" aria-pressed="false">Pause</button>
+  </div>
+  <div class="about-collage" id="aboutCollage"></div>
+</section>
+
 </main>
 
 
+
+<script src="js/AboutMediaList.js"></script>
+<script src="js/AboutMedia.js"></script>
 </body>

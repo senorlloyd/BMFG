@@ -1,1 +1,46 @@
+name: Update About page media
 
+on:
+  push:
+    paths:
+      - "Assets/About/Media/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: about-media
+  cancel-in-progress: false
+
+jobs:
+  build-media:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: |
+          pip install pillow pillow-heif
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+
+      - name: Shrink files and rebuild the media list
+        run: python tools/build-about-media.py --optimize
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A Assets/About/Media js/AboutMediaList.js
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Update About page media"
+            git pull --rebase
+            git push
+          fi
